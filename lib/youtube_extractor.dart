@@ -72,7 +72,7 @@ class YouTubeExtractor {
       if (signature != null) {
         var playerSource = await _getVideoPlayerSourceAsync(playerSourceUrl);
         signature = playerSource.decipher(signature);
-        url = url + '&signature=' + signature;
+        url = url + '&ratebypass=yes&signature=' + signature;
       }
 
       // Probe stream and get content length
